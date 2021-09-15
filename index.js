@@ -11,7 +11,7 @@ function trimProperties(obj) {
   for(var key in obj) {
     result[key] = obj[key].trim()
   }
-  return result // i thought this would make a clone
+  return result
 }
 
 /**
@@ -23,7 +23,10 @@ function trimProperties(obj) {
  * trimPropertiesMutation({ name: '  jane  ' }) // returns the object mutated in place { name: 'jane' }
  */
 function trimPropertiesMutation(obj) {
-  // ✨ implement
+  for(var key in obj) {
+    obj[key] = obj[key].trim()
+  }
+  return obj
 }
 
 /**
