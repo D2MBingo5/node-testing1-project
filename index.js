@@ -7,11 +7,11 @@
  * trimProperties({ name: '  jane  ' }) // returns a new object { name: 'jane' }
  */
 function trimProperties(obj) {
-  // ✨ implement
+  const result = {}
   for(var key in obj) {
-    obj[key] = obj[key].trim()
+    result[key] = obj[key].trim()
   }
-  return obj
+  return result // i thought this would make a clone
 }
 
 /**
