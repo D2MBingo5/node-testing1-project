@@ -21,7 +21,11 @@ describe('[Exercise 2] trimPropertiesMutation', () => {
     utils.trimPropertiesMutation(input)
     expect(input).toMatchObject({ foo: 'foo', bar: 'bar', baz: 'baz' })
   })
-  // test('[4] the object returned is the exact same one we passed in', () => {})
+  test('[4] the object returned is the exact same one we passed in', () => {
+    const input = { foo: '  foo ', bar: 'bar ', baz: ' baz' }
+    const actual = utils.trimPropertiesMutation(input)
+    expect(actual).toBe(input)
+  })
 })
 
 describe('[Exercise 3] findLargestInteger', () => {
