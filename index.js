@@ -142,9 +142,10 @@ class Car {
     if (distance <= availableMiles) {
       this.odometer += distance
       this.tank -= (distance / this.mpg)
-      return this.odometer
-    }
+    } else {
     this.odometer = this.odometer + availableMiles
+    this.tank = 0
+    }
     return this.odometer
   }
 
